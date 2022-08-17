@@ -34,6 +34,7 @@ ALLOWED_HOSTS = [
     '192.168.14.124',
     '192.168.1.58',
     '192.168.1.36',
+     'all-yemeni-textbooks.herokuapp.com',
 ]
 
 
