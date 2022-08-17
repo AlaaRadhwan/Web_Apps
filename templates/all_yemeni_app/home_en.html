@@ -1,0 +1,115 @@
+{% extends 'all_yemeni_app/home_ar.html' %}
+{% load static %}
+
+
+{% block css-title%}
+<link rel="stylesheet" href="{% static 'css/home_en.css' %}">
+<title>All Yemeni Textbooks</title>
+
+{% endblock%}
+
+
+{% block logo%}
+<div class="logo">
+    <a href="#hero"><h4>All Yemeni Textbooks</h4></a>
+</div>
+{% endblock %}  
+
+{% block language%}
+<div class="language">
+    <a href="{% url 'home-ar' %}" class="cta">Arabic</a>
+</div> 
+{% endblock %}
+
+
+{% block nav-links%}
+<li>
+    <a href="#feedback">Contact Us</a>
+</li>
+{% endblock %}
+
+
+{% block hero%}
+<div class="text-header">
+    <h1>جميع المناهج الدراسية</h1>
+    <h1>All Yemeni Textbooks</h1>
+</div>
+<div class="text">
+    <h3>All the textbooks a student might need in one place</h3>
+</div>
+<a href="#download" class="cta">Download</a>
+{% endblock %}
+
+
+{% block hero-about%}
+<h2>Aim of the App?</h2>
+<div class="about-text">
+    <!-- TODO: add vertical line -->
+    <div class="vl"></div>
+    <h4>
+        This app was created to support and help Yemeni students from all greades
+        starting from the first class all the way to the secondary classes who
+        unfortunately as a result of the on going civil war in the contry have lost
+        access to many School textbooks and therefore, cannot continue their studies
+        easily.
+    </h4>
+</div>
+{% endblock %}
+
+
+{% block howto%}
+<h2>How to use</h2>
+<hr class="hr-title">
+<div class="rsd read">
+    <img src=".{% static 'images/read.png' %}" alt="read books">
+    <h4>You can read the books directly from the app</h4>
+</div>
+<div class="rsd share">
+    <img src="{% static 'images/share.png' %}" alt="read books">
+    <h4>You can share the books with your friends and classmates</h4>
+</div>
+<div class="rsd download">
+    <img src="{% static 'images/download.png' %}" alt="read books">
+    <h4>You can download the books and save them for another time</h4>
+</div>
+{% endblock %}
+
+
+{% block download%}
+<h2>Download the app now</h2>
+<hr class="hr-title">
+<div class="phone">
+    <div class="white-rai"></div>
+    <div class="notch"></div>
+    <div class="white-rai"></div>
+
+    <div class="screen">
+        <!-- <img src="./photos/all-yemeni-photo.jpeg" alt="screen-shot"> -->
+    </div>
+</div>
+<h4>The app is free and still under continues development to improve the user experince</h4>
+<a href="https://s2files.mobeasy.com/builds/build-580698-691412.apk" class="cta download-cta">Download</a>            
+{% endblock %}
+
+
+{% block feed%}
+<h2>Your opinion matters!</h2>
+<hr class="hr-title">
+<h4>
+    Please do not hesitate to contact us and share your thoughts and adivse in social media
+</h4>
+<div class="icons">
+    <a href="https://www.instagram.com/alaa_radhwan052/" target="_blank"><img src="{% static 'images/insta.png' %}" alt="instagram"></a>
+    <a href="https://wa.me/905526533720" target="_blank"><img src="{% static 'images/whatsapp.png' %}" alt="whatsapp"></a>
+    <a href="https://www.facebook.com/profile.php?id=100004176432693" target="_blank"><img src="{% static 'images/icons8-facebook-50.png' %}" alt="faceboook"></a>
+    <a href="mailto:alaa.radhwanmustafa@gmail.com" target="_blank"><img src="{% static 'images/mail2.png' %}" alt="e-mail"></a>
+</div>
+{% endblock %}
+
+{% block footer%}
+<div class="footer-logo">
+    <h4>جميع المناهج الدراسية</h4>
+    <h4>All Yemeni Textbooks</h4>                
+</div>
+<p>All Yemeni Textbooks©2022. All rights reserved.</p>
+{% endblock %}

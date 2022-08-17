@@ -1,0 +1,151 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css-title %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <title>جميع المناهج الدراسية</title>
+    {% endblock %}
+</head>
+<body>
+
+    <nav>
+        <div class="nav-header">
+            {% block logo%}
+            <div class="logo">
+                <a href="#hero"><h4>جميع المناهج الدراسية</h4></a>
+            </div>  
+            {% endblock %}
+            {% block language%}
+            <div class="language">
+                <a href="{% url 'home-en' %}" class="cta">الأنجليزية</a>
+            </div> 
+            {% endblock %}
+            <div class="burger">
+                <div class="line1 line"></div>
+                <div class="line2 line"></div>
+                <div class="line3 line"></div>
+            </div>                   
+        </div>
+        
+
+
+        <ul class="nav-links">
+            {% block nav-links%}
+            <li>
+                <a href="#feedback">تواصل معنا</a>
+            </li>
+            {% endblock %}
+        </ul>
+
+
+    </nav>
+
+    <section id="hero">
+        <div class="hero container">
+            {% block hero%}
+            <div class="text-header">
+                <h1>جميع المناهج الدراسية</h1>
+                <h1>All Yemeni Textbooks</h1>
+            </div>
+            <div class="text">
+                <h3>جميع المناهج التي يحتاجها الطالب في مكان واحد</h3>
+            </div>
+            <a href="#download" class="cta">حمل التطبيق</a>
+            {% endblock %}
+        </div>
+        <div class="hero-about container">
+            {% block hero-about%}
+            <h2>الهدف من التطبيق؟</h2>
+            <div class="about-text">
+                <!-- TODO: add vertical line -->
+                <div class="vl"></div>
+                <h4>
+                    تم انشاء هذا التطبيق من أجل مساعدة الطلاب اليمنيين من مختلف الصفوف الدراسية الأساسية والثانوية عن طريق توفير المناهج الدراسية اليمنية اللازمة وتسهيل الحصول عليها في مكان واحد سهل الوصول إليه
+
+                </h4>
+            </div>
+            {% endblock %}
+        </div>
+    </section>
+
+    <section id="howto">
+        <div class="howto container">
+            {% block howto%}
+            <h2>كيفية الاستخدام</h2>
+            <hr class="hr-title">
+            <div class="rsd read">
+                <img src=".{% static 'images/read.png' %}" alt="read books">
+                <h4>تستطيع قراءة المناهاج مباشرة من التطبيق</h4>
+            </div>
+            <div class="rsd share">
+                <img src="{% static 'images/share.png' %}" alt="read books">
+                <h4>شارك المناهج مع أصدقائك وزملائك</h4>
+            </div>
+            <div class="rsd download">
+                <img src="{% static 'images/download.png' %}" alt="read books">
+                <h4>حمل المناهج لقراءتها في أي وقت وأي مكان</h4>
+            </div>
+            {% endblock %}
+        </div>
+    </section>
+
+    <section id="download">
+        <div class="download container">
+            {% block download%}
+            <h2>حمل التطبيق الان</h2>
+            <hr class="hr-title">
+            <div class="phone">
+                <div class="white-rai"></div>
+                <div class="notch"></div>
+                <div class="white-rai"></div>
+
+                <div class="screen">
+                    <!-- <img src="./photos/all-yemeni-photo.jpeg" alt="screen-shot"> -->
+                </div>
+            </div>
+            <h4>التطبيق مجاني ومازال تحت التطوير المستمر لتحسين تجربة المستخدم</h4>
+            <a href="https://s2files.mobeasy.com/builds/build-580698-691412.apk" class="cta download-cta">حمل التطبيق</a>            
+            {% endblock %}
+        </div>
+
+    </section>
+
+    <section id="feedback">
+        <div class="feed container">
+            {% block feed%}
+            <h2>!رأيك يهمنا</h2>
+            <hr class="hr-title">
+            <h4>لا تتردد في التواصل معنا ومشاركتنا رأيك عبر منصات 
+                الاجتماعي
+            </h4>
+            <div class="icons">
+                <a href="https://www.instagram.com/alaa_radhwan052/" target="_blank"><img src="{% static 'images/insta.png' %}" alt="instagram"></a>
+                <a href="https://wa.me/905526533720" target="_blank"><img src="{% static 'images/whatsapp.png' %}" alt="whatsapp"></a>
+                <a href="https://www.facebook.com/profile.php?id=100004176432693" target="_blank"><img src="{% static 'images/icons8-facebook-50.png' %}" alt="faceboook"></a>
+                <a href="mailto:alaa.radhwanmustafa@gmail.com" target="_blank"><img src="{% static 'images/mail2.png' %}" alt="e-mail"></a>
+            </div>
+            {% endblock %}
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="footer container">
+            {% block footer%}
+            <div class="footer-logo">
+                <h4>جميع المناهج الدراسية</h4>
+                <h4>All Yemeni Textbooks</h4>                
+            </div>
+            <p>2022 ©جميع المناهج الدراسية. كل الحقوق محفوظة</p>
+            {% endblock %}
+        </div>
+
+    </section>
+    <script src="{% static 'js/navApp.js' %}"></script>
+    <script src="{% static 'js/objectFadeIn.js' %}"></script>
+</body>
+</html>
